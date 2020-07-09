@@ -1,6 +1,8 @@
 <?php
 
-class Login{
+use App\Admin\Admin;
+
+class Login extends Admin{
     protected $users;
     function __construct()
     {
@@ -9,7 +11,6 @@ class Login{
 
     function get_users()
     {
-        // handling file
         $filename = "users.json";
         $open_file = fopen($filename, "a+");
         $dataJson = fread($open_file, filesize($filename));

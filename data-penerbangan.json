@@ -1,0 +1,34 @@
+[
+    {
+        "flight": "Air Asia",
+        "flight_code": "QZ7682",
+        "flight_date": "2016-06-08",
+        "flight_transit": "Nonstop",
+        "flight_infotransit": "CGK - SUB (08:45 -10:00)",
+        "flight_price": "500000"
+    },
+    {
+        "flight": "Lion Air",
+        "flight_code": "JT690",
+        "flight_date": "2016-06-08",
+        "flight_transit": "Nonstop",
+        "flight_infotransit": "CGK-SUB (05:00 -06:30) ",
+        "flight_price": "440000"
+    },
+    {
+        "flight": "Lion Air",
+        "flight_code": "JT748",
+        "flight_date": "2016-06-08",
+        "flight_transit": "Nonstop",
+        "flight_infotransit": "CGK-SUB (06:00 -07:30) ",
+        "flight_price": "440000"
+    },
+    {
+        "flight": "Garuda",
+        "flight_code": "QZ7683",
+        "flight_date": "2016-06-08",
+        "flight_transit": "Nonstop",
+        "flight_infotransit": "CGK - SUB (08:45 -11:00)",
+        "flight_price": "350000"
+    }
+]
