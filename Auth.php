@@ -1,6 +1,6 @@
 <?php
 
-require_once "./App/Customers/Customers.php";
+use App\Customers\Customers as customer;
 
 class Auth extends Login{
     function login($data){
@@ -29,7 +29,7 @@ class Auth extends Login{
                 echo "==========================";
             }else{
                 echo "======= Hallo customers ======= \n";
-                $customer = new Customers();
+                $customer = new customer();
                 $customer->view_schedule();
                 while(true){
                     echo "Pesan Tiket ? (Y/N) ";

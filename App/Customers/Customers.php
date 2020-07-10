@@ -1,6 +1,6 @@
-<?php
+<?php namespace App\Customers;
 
-class Customers extends Login{
+class Customers{
     public $schedule;
     function get_schedule(){
         $filename = "data-penerbangan.json";
