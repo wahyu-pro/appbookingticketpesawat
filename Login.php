@@ -1,8 +1,8 @@
 <?php
 
-use App\Admin\Admin;
+// use App\Admin\Admin;
 
-class Login extends Admin{
+class Login{
     protected $users;
     function __construct()
     {

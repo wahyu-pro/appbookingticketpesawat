@@ -1,0 +1,37 @@
+[
+    {
+        "code": "CGK",
+        "city": "kota baru",
+        "airport": "Soekarno Hatta Intl Airport",
+        "grup": "lokal",
+        "status": "ON"
+    },
+    {
+        "code": "SUB",
+        "city": "kota baru",
+        "airport": "Juanda",
+        "grup": "lokal",
+        "status": "ON"
+    },
+    {
+        "code": "DPS",
+        "city": "kota baru",
+        "airport": "Ngurah Rai",
+        "grup": "lokal",
+        "status": "ON"
+    },
+    {
+        "code": "UPG",
+        "city": "kota baru",
+        "airport": "Sultan Hasanuddin",
+        "grup": "lokal",
+        "status": "ON"
+    },
+    {
+        "code": "BPN",
+        "city": "Denpasar",
+        "airport": "Sultan Aji Muhammad",
+        "grup": "lokal",
+        "status": "ON"
+    }
+]

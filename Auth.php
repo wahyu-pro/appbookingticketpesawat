@@ -1,6 +1,9 @@
 <?php
 
-use App\Customers\Customers as customer;
+use App\Customers\BookingTicket as pesanTicket;
+use App\Customers\ViewPenerbangan as schedules;
+
+use App\Admin\Menu as menu;
 
 class Auth extends Login{
     function login($data){
@@ -11,33 +14,30 @@ class Auth extends Login{
             $key = implode(" ", $key);
             if ($role[$key] == "admin"){
                 echo "======= Hallo admin ! ======= \n";
-                $this->view_jadwal();
-                while(true){
-                    echo "=======Action=======";
-                    echo "\nadd  \nremove  \nupdate \n";
-                    echo "Silahkan pilih action : ";
-                    $choose = trim(fgets(STDIN));
-                    if ($choose) {
-                        $this->choose_action($choose);
-                        echo "========================== \n";
-                    }else{
-                    break;
-                    }
+                echo "======== Menu =========";
+                echo "\n1. Data Airport \n2. Data Maskapai \n3. Data Penerbangan \n";
+                echo "Silahkan pilih menu ! \n";
+                $pilih = strtolower(trim(fgets(STDIN)));
+                echo "==========================\n";
+                if($pilih != ""){
+                    $menu = new menu();
+                    $menu->choose_menu($pilih);
                 }
                 echo "\n";
                 echo "Terima kasih !!! \n";
                 echo "==========================";
             }else{
                 echo "======= Hallo customers ======= \n";
-                $customer = new customer();
-                $customer->view_schedule();
+                $schedule = new schedules();
+                $schedule->view_schedule();
                 while(true){
                     echo "Pesan Tiket ? (Y/N) ";
                     $choose = trim(fgets(STDIN));
                     if ($choose == "Y") {
                         echo "Silahkan pilih sesuai nomor ! ";
                         $no = trim(fgets(STDIN));
-                        $customer->pesan_ticket($no);
+                        $ticket = new pesanTicket();
+                        $ticket->pesan_ticket($no);
                     }else{
                     break;
                     }
