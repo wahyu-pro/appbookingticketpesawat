@@ -13,9 +13,10 @@ class Admin{
     function view_jadwal(){
         echo "========Data Jadwal Penerbangan======== \n";
         $this->get_jadwal();
+        $no = 1;
         $dataJadwal = array_map(function($v){return($v["flight"]." ".$v['flight_code']." ".$v['flight_date']." ".$v['flight_transit']." ".$v['flight_infotransit']." ".$v['flight_price']);}, $this->schedules);
         foreach ($dataJadwal as $jadwal) {
-            echo $jadwal."\n";
+            echo $no++.") ".$jadwal."\n";
         }
         echo "======================================= \n";
     }
