@@ -76,7 +76,7 @@ class DataAirport extends Admin{
                     }
                     $dataWrite = json_encode($this->airport, JSON_PRETTY_PRINT);
                     if(file_put_contents("area.json", $dataWrite)){
-                        echo "Message : flight berhasil diupdate \n";
+                        echo "Message : airport berhasil diupdate \n";
                     }
                     break;
                 case "city":
@@ -90,7 +90,7 @@ class DataAirport extends Admin{
                     }
                     $dataWrite = json_encode($this->airport, JSON_PRETTY_PRINT);
                     if(file_put_contents("area.json", $dataWrite)){
-                        echo "Message : flight date berhasil diupdate \n";
+                        echo "Message : city date berhasil diupdate \n";
                     }
                     break;
                 case "grup":
