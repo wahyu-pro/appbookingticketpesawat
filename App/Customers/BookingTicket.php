@@ -2,30 +2,13 @@
 
 class BookingTicket extends Customers{
 
+    public $dataPemesanan = array();
     function pesan_ticket($no){
-        switch ($no) {
-            case 1:
-                $dataWrite = json_encode($this->schedule[1], JSON_PRETTY_PRINT);
+            array_push($this->dataPemesanan,$this->schedule[$no - 1]);
+            $dataWrite = json_encode($this->dataPemesanan, JSON_PRETTY_PRINT);
                     if(file_put_contents("tiket-pemesanan.json", $dataWrite)){
                         echo "Message : Tiket berhasil dipesan \n";
                     }
-                break;
-            case 2:
-                $dataWrite = json_encode($this->schedule[2], JSON_PRETTY_PRINT);
-                    if(file_put_contents("tiket-pemesanan.json", $dataWrite)){
-                        echo "Message : Tiket berhasil dipesan \n";
-                    }
-                break;
-            case 3:
-                $dataWrite = json_encode($this->schedule[3], JSON_PRETTY_PRINT);
-                    if(file_put_contents("tiket-pemesanan.json", $dataWrite)){
-                        echo "Message : Tiket berhasil dipesan \n";
-                    }
-                break;
-            default:
-                echo "Maaf pilihan anda tidak ada \n";
-                break;
-        }
     }
 
 }
